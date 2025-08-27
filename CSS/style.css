@@ -1,0 +1,50 @@
+body {
+    background-color: blue;
+}
+
+h2,p{
+    background-color: red;
+    color:yellowgreen
+}
+.para1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+div + p{      /* works on forward adjacent only */              
+    background-color: aqua;
+}
+
+div ~ p{      /* works on all forward adjacent */              
+    background-color: aqua;
+} */
+
+div _ p{      /* works on forward adjacent only */              
+    background-color: aqua;
+}
+
+p:hover {
+    background-color: blanchedalmond;
+    font-size: xx-large;
+}
+
+p::before{
+    content: "HII";
+}
+
+p::after{
+    background-color: blueviolet;
+    CONTENT: "Added after";
+}
+
+p::selection {
+    background-color: aquamarine;
+}
+
+p:nth-child(2) {     /* // paragraph apne parent ka nth-child hoga */
+    background-color: azure;
+}
+
+div p :nth-of-type(1){
+    background-color: chocolate;
+}
