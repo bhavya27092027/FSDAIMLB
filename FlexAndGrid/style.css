@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    flex-wrap: wrap;
+    border: 2px solid darkblue;
+    background-color: red;
+    gap:4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.child {
+    border: 2px dotted darkgreen;
+    background-color: yellowgreen;
+    height: 24vh;
+    width: 24vw;
+}
+
+.child2 {
+    background-color: palevioletred;
+}
+
+.child4 {
+    background-color: palevioletred;
+}
+
+p:nth-child(2) {
+    background-color: chartreuse;
+}
+
+div p:nth-of-type(2) {
+    background-color: red;
+}
