@@ -1,9 +1,9 @@
 .box {
-    border : 2px solid #333;
+    border-bottom : 2px solid #333;
     background-color: #f4f6f9;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows:  auto auto;
     gap: 20px;
     padding: 15px;
     font-family: Arial, sans-serif;
@@ -14,7 +14,7 @@
   .box3,
   .box4 {
     border: 2px solid #ddd;
-    background-color: #fff;
+    background-color: lightblue;
     border-radius: 10px;
     padding: 15px;
     display: grid;
@@ -23,7 +23,22 @@
 
   .box1 {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows:  auto auto;
+  }
+
+  .box2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:  auto auto;
+  }
+
+  .box3 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:  auto auto;
+  }
+
+  .box4 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:  auto auto;
   }
 
   .heading {
@@ -120,4 +135,8 @@
     margin-top: 8px;
     font-size: 14px;
     font-weight: bold;
+  }
+
+  footer {
+    height: 2vw;
   }
