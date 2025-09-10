@@ -33,85 +33,33 @@ div p:nth-of-type(2) {
     background-color: red;
 } */
 
-
-
-
-
-.boxes {
-    border:2px solid black;
-    background-color: darkred;
-    display: grid;
-    grid-template-columns:repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr) ;
-}
-
-.b1 {
-    height: 10vh;
-    width: 5vw;
-    border: 1px solid darkgoldenrod;
-    background-color: green;
-}
-
-.b2 {
-    height: 10vh;
-    width: 5vw;
-    border: 1px solid darkgoldenrod;
-    background-color: lavenderblush;
-}
-
-.b3 {
-    height: 10vh;
-    width: 5vw;
-    border: 1px solid darkgoldenrod;
-    background-color: mediumpurple;
-}
-
-.b4 {
-    height: 10vh;
-    width: 5vw;
-    border: 1px solid darkgoldenrod;
-    background-color: azure;
-}
-
-.boxclass {
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-.box1 {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    background-color: aqua;
-    height: 400px;
-    width: 300px;
-    border:1.5px dotted black;
-    /* grid-column-start: 1;
-    grid-column-end: 3;              // For merging
-    grid-row-start: 1;
-    grid-row-end:2; */
-    /* // For Overlapping use z-index */
-}
-
-.box2 {
-    background-color: blue;
-    height: 400px;
-    width: 300px;
-    border:1.5px dotted black;
-}
-
-.box3 {
-    background-color: yellow;
-    height: 400px;
-    width: 300px;
-    border:1.5px dotted black;
-}
-
-.box4 {
-    background-color: greenyellow;
-    height: 400px;
-    width: 300px;
-    border:1.5px dotted black;
-    /* row -> (1,2)                      // Imagine grid as a Matrix 
+    /* row -> (1,2)                      // Imagine grid as a Matrix
     column -> (4,5) */
+
+
+.container1 {
+    height: 60vh;
+    width: 50vh;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.box {
+    height: 25%;
+    width: 40%;
+    border: 2px solid black;
+    margin: 1% auto;
+
+}
+
+h1 {
+    font-size: 30;
+    text-align: left;
+}
+
+.conatainers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
