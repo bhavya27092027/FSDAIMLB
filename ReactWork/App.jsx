@@ -8,12 +8,12 @@ const h2 = React.createElement(
   "h2",
   { style: { backgroundColor: "blue", color: "white" } },
   "Welcome to React DOM"
-);  /* Element created using React DOM API  */  
+);  /* Element created using React DOM API  */
 const li1 = React.createElement('li', {}, "Java");
 const li2 = React.createElement('li', {}, "Python");
 const li3 = React.createElement('li', {}, "C++");
 const li4 = React.createElement('li', {}, "React");
-const ul = React.createElement('ul', { style: { backgroundColor: "greenyellow" } }, li1,li2,li3,li4)
+const ul = React.createElement('ul', { style: { backgroundColor: "greenyellow" } }, li1, li2, li3, li4)
 /* root.render(h2);  */
 /* root.render(ul);  */
 
@@ -47,7 +47,7 @@ const container = React.createElement(
 );
 
 
-const wrapper = React.createElement("div", {}, h2,container,ul)
+const wrapper = React.createElement("div", {}, h2, container, ul)
 /* root.render(wrapper); */
 
 
@@ -57,9 +57,9 @@ const h21 = <h2> Hi, I am using JSX </h2>
 const lil1 = <li>React</li>
 const lil2 = <li>Angular</li>
 const lil3 = <li>Vue</li>
-const ull = <ul style={{backgroundColor:'yellow'}}>{[lil1,lil2,lil3]}</ul>
-const picc = <img src="https://www.shutterstock.com/image-vector/technology-software-development-web-design-260nw-2320104951.jpg" style={{width:'200px',height:'200px'}} alt="img"/>
-const mynamee = <h1 style={{display:"flex",justifyContent:"center"}}>My name is Bhavya Jain</h1>
+const ull = <ul style={{ backgroundColor: 'yellow' }}>{[lil1, lil2, lil3]}</ul>
+const picc = <img src="https://www.shutterstock.com/image-vector/technology-software-development-web-design-260nw-2320104951.jpg" style={{ width: '200px', height: '200px' }} alt="img" />
+const mynamee = <h1 style={{ display: "flex", justifyContent: "center" }}>My name is Bhavya Jain</h1>
 
 const containerr = React.createElement(
   "div",
@@ -74,7 +74,7 @@ const containerr = React.createElement(
   mynamee
 );
 
-const wrapperr = React.createElement("div", {}, h21,containerr,ull)
+const wrapperr = React.createElement("div", {}, h21, containerr, ull)
 
 root.render(wrapperr);
 
