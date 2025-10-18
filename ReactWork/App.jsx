@@ -52,7 +52,7 @@ const wrapper = React.createElement("div", {}, h2,container,ul)
 
 
 
-// JSX
+// JSX (JSX is JavaScript + HTML)
 const h21 = <h2> Hi, I am using JSX </h2>
 const lil1 = <li>React</li>
 const lil2 = <li>Angular</li>
