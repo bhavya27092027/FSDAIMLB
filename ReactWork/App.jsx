@@ -1,5 +1,6 @@
 /* React updates elements by first changing a virtual DOM, then syncing only the necessary parts with the real DOM. Whereas a normal DOM updates the whole page directly whenever something changes.*/
 
+
 const par = document.getElementById("parent");  // Normal DOM Function
 /* console.log(par); */
 const root = ReactDOM.createRoot(par);   // React DOM Function
@@ -76,6 +77,9 @@ const containerr = React.createElement(
 const wrapperr = React.createElement("div", {}, h21,containerr,ull)
 
 root.render(wrapperr);
+
+// JSX must return a single wrapper — like one div, section, or fragment — to keep the structure valid. Because JSX compiles to React.createElement() , which expects one root element
+
 
 /* Browsers don’t understand JSX natively.
 • 	Tools like Vite, Webpack, or Create React App use Babel under the hood to convert JSX into valid JavaScript before it reaches the browser.
