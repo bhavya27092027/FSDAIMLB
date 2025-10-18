@@ -1,3 +1,5 @@
+/* React updates elements by first changing a virtual DOM, then syncing only the necessary parts with the real DOM. Whereas a normal DOM updates the whole page directly whenever something changes.*/
+
 const par = document.getElementById("parent");  // Normal DOM Function
 /* console.log(par); */
 const root = ReactDOM.createRoot(par);   // React DOM Function
@@ -78,3 +80,4 @@ root.render(wrapperr);
 /* Browsers don’t understand JSX natively.
 • 	Tools like Vite, Webpack, or Create React App use Babel under the hood to convert JSX into valid JavaScript before it reaches the browser.
 • 	This lets you write clean, HTML-like code in React while still running pure JS behind the scenes. */
+
