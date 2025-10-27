@@ -9,6 +9,8 @@ const h2 = React.createElement(
   { style: { backgroundColor: "blue", color: "white" } },
   "Welcome to React DOM"
 );  /* Element created using React DOM API  */
+/* The React DOM API is a set of methods provided by the react-dom package that allows React applications to interact with the web browser’s Document Object Model (DOM). It serves as the bridge between React components and the actual DOM elements rendered in the browser. */
+
 const li1 = React.createElement('li', {}, "Java");
 const li2 = React.createElement('li', {}, "Python");
 const li3 = React.createElement('li', {}, "C++");
