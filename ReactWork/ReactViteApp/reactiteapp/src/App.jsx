@@ -1,15 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Profile from './components/Profile'
+/* import Profile from './components/Profile' */
+import Gallery from './components/Gallery'
 
 
 function App() {
 
   return (
     <div className='container'>
-      <h2>Welcome to React + Vite App</h2>
       <div>
-        <Profile />
+        {/* <Profile /> */}
+        <Gallery />
       </div>
     </div>
   )

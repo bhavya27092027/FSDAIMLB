@@ -1,0 +1,11 @@
+.page-wrapper {
+  border: 5px solid #B2A2DE;
+  width: 400px;
+  background-color: #FFFFFF;
+  color:#307C7A;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: auto;
+}
