@@ -1,5 +1,7 @@
 import './App.css'
+import StateHandling from './components/StateHandling'
 import Student from './components/Student'
+import ImageManipulation from './components/imageManipulation'
 
 function App() {
   const student = [{
@@ -22,14 +24,17 @@ function App() {
 
   return (
     <div>
-      {/* <Student name="Bhavya Jain" branch="AIML" section="B" roll_no="2300320310068" college="ABES Engineering College" /> */}
+      {/* {/* <Student name="Bhavya Jain" branch="AIML" section="B" roll_no="2300320310068" college="ABES Engineering College" /> */}
       {/* <Student data={student[1]} /> */}
 
-      {
+      {/* {
         student.map((element, index) => (
           <Student data={element} key={index} />
         ))
-      }
+      }  */}
+
+      {/* <StateHandling /> */}
+      <ImageManipulation />
     </div>
   )
 }
