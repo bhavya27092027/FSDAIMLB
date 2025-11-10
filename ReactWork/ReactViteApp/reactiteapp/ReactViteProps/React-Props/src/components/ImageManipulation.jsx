@@ -7,9 +7,14 @@ const ImageManipulation = () => {
     const [red, setRed] = useState(0);
     const [green, setGreen] = useState(0);
     const [blue, setBlue] = useState(0);
+    const [ImageAngle, setImageAngle] = useState(0);
 
     function increaseRabbitWidth() {
         setRabbitWidth(rabbitWidth + 20);
+    }
+
+    function imageRotation() {
+        setImageAngle(ImageAngle + 30);
     }
 
     function changeColor() {
@@ -28,7 +33,8 @@ const ImageManipulation = () => {
                         height: `${rabbitHeight}px`,
                         width: `${rabbitWidth}px`,
                         padding: '20px',
-                        backgroundColor: `rgb(${red}, ${green}, ${blue})`
+                        backgroundColor: `rgb(${red}, ${green}, ${blue})`,
+                        transform: `rotate(${ImageAngle}deg)`
                     }}
                     src={Rabbit}
                     alt="Rabbit"
@@ -44,9 +50,24 @@ const ImageManipulation = () => {
                     Increase Width
                 </button>
                 <br /><br />
+                <button onClick={imageRotation}>
+                    Image Rotate
+                </button>
+                <br /><br />
                 <button onClick={changeColor}>
                     Change Background Color
                 </button>
+                <div>
+                    <h4>
+                        Red Color Value: {red}
+                    </h4>
+                    <h4>
+                        Blue Color Value: {blue}
+                    </h4>
+                    <h4>
+                        Green Color Value: {green}
+                    </h4>
+                </div>
             </div>
         </div>
     );
