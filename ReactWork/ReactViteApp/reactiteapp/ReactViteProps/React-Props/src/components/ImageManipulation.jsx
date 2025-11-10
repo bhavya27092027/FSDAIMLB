@@ -1,19 +1,55 @@
-import React, { useState } from 'react'
-import Rabbit1 from './Rabbit1.jpg';
+import React, { useState } from 'react';
+import Rabbit from './Rabbit.png';
 
-const imageManipulation = () => {
-    const [rabbitHeight, setrabbitHeight] = useState(200)
+const ImageManipulation = () => {
+    const [rabbitHeight, setRabbitHeight] = useState(200);
+    const [rabbitWidth, setRabbitWidth] = useState(200);
+    const [red, setRed] = useState(0);
+    const [green, setGreen] = useState(0);
+    const [blue, setBlue] = useState(0);
+
+    function increaseRabbitWidth() {
+        setRabbitWidth(rabbitWidth + 20);
+    }
+
+    function changeColor() {
+        setRed(Math.random() * 255);
+        setGreen(Math.random() * 255);
+        setBlue(Math.random() * 255);
+    }
+
     return (
         <div>
-            ImageManipulation
+            <h1>Image Manipulation</h1>
             <div>
-                <img style={{ border: '2px solid black', height: '500px', width: '400px', padding: '100px' }} src="{Rabbit1}" alt="" height={rabbitHeight} width={200} />
+                <img
+                    style={{
+                        border: '2px solid black',
+                        height: `${rabbitHeight}px`,
+                        width: `${rabbitWidth}px`,
+                        padding: '20px',
+                        backgroundColor: `rgb(${red}, ${green}, ${blue})`
+                    }}
+                    src={Rabbit}
+                    alt="Rabbit"
+                />
             </div>
             <div>
-                <button onClick={() => setrabbitHeight(rabbitHeight + 20)}></button>
+                <br />
+                <button onClick={() => setRabbitHeight(rabbitHeight + 20)}>
+                    Increase Height
+                </button>
+                <br /><br />
+                <button onClick={increaseRabbitWidth}>
+                    Increase Width
+                </button>
+                <br /><br />
+                <button onClick={changeColor}>
+                    Change Background Color
+                </button>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default imageManipulation
+export default ImageManipulation;
