@@ -7,12 +7,13 @@ import { useState } from 'react'
 
 function App() {
   const [logData, setlogData] = useState();
+  const [loginData, setloginData] = useState();
   return (
     <>
       <h1>Welcome to Our Online Shopping Center</h1>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login loginData={setloginData} />} />
           <Route path="/registration" element={<Registration regData={setlogData} />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/mainlayout" element={<MainLayout />} />
@@ -21,6 +22,11 @@ function App() {
       <h2>
         {
           JSON.stringify(logData)
+        }
+      </h2>
+      <h2>
+        {
+          JSON.stringify(loginData)
         }
       </h2>
     </>
