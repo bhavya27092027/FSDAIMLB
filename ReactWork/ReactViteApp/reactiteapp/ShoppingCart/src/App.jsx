@@ -7,26 +7,20 @@ import { useState } from 'react'
 
 function App() {
   const [logData, setlogData] = useState();
-  const [loginData, setloginData] = useState();
   return (
     <>
-      <h1>Welcome to Our Online Shopping Center</h1>
+      <h1 style={{ fontFamily: 'cursive', fontSize: "80px" }}>Welcome to Our Online Shopping Center</h1>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login loginData={setloginData} />} />
+          <Route path="/login" element={<Login loginData={logData} />} /> {/* // State-up Lifting: Lifting state up in React means moving shared state to the closest common ancestor component so that multiple child components can access and update it consistently. */}
           <Route path="/registration" element={<Registration regData={setlogData} />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/mainlayout" element={<MainLayout />} />
+          <Route path="/" element={<MainLayout />} /> {/* // Default Layout , means whenever our application opens main layout is visble to us */}
         </Routes>
       </BrowserRouter>
       <h2>
         {
           JSON.stringify(logData)
-        }
-      </h2>
-      <h2>
-        {
-          JSON.stringify(loginData)
         }
       </h2>
     </>

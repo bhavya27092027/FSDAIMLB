@@ -1,39 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
 
-function Login({loginData}) {
-    const [Email, setEmail] = useState();
-    const [Password, setPassword] = useState();
+function Login({ loginData }) {
+    const [Email, setEmail] = useState('');
+    const [Password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
 
-    function getData() {
-        const data = {
-            Email,
-            Password
+    function getData(e) {
+        e.preventDefault();
+
+        const enteredloginData = { Email, Password };
+
+        if (loginData && Email === loginData.Email && Password === loginData.Password) {
+            console.log("Login successful:", enteredloginData);
+            navigate('/dashboard');
+            setError('');
+        } else {
+            setError('Invalid email or password');
         }
-        loginData(data);
     }
+
     return (
         <div>
             <h2 style={{ backgroundColor: 'red', color: 'white' }}>Login Form</h2>
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" onChange={(e) => setEmail(e.target.value)} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <form onSubmit={getData}>
+                <div className="form-group">
+                    <label htmlFor="emailInput">Email address</label>
+                    <input
+                        type="email"
+                        value={Email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="form-control"
+                        id="emailInput"
+                        aria-describedby="emailHelp"
+                    />
+                    <small id="emailHelp" className="form-text text-muted">
+                        We'll never share your email with anyone else.
+                    </small>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" onChange={(e) => setPassword(e.target.value)} class="form-control" id="exampleInputPassword1" />
+                <div className="form-group">
+                    <label htmlFor="passwordInput">Password</label>
+                    <input
+                        type="password"
+                        value={Password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="form-control"
+                        id="passwordInput"
+                    />
                 </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" onClick={getData} class="btn btn-primary">Submit</button>
+                <button type="submit" onClick={getData} className="btn btn-primary">Submit</button>
             </form>
+
+            {error && <p style={{ color: 'red' }}>{error}</p>}
         </div>
-    )
+    );
 }
 
-export default Login
+export default Login;
