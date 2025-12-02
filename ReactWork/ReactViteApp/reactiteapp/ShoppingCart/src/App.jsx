@@ -9,7 +9,7 @@ function App() {
   const [logData, setlogData] = useState();
   return (
     <>
-      <h1 style={{ fontFamily: 'cursive', fontSize: "80px" }}>Welcome to Our Online Shopping Center</h1>
+      <h1 style={{ fontFamily: 'cursive', fontSize: "80px", textAlign: "center" }}>Welcome to Our Online Shopping Center</h1>
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login loginData={logData} />} /> {/* // State-up Lifting: Lifting state up in React means moving shared state to the closest common ancestor component so that multiple child components can access and update it consistently. */}
