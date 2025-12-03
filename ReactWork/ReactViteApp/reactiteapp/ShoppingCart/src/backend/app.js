@@ -1,10 +1,13 @@
 import express from 'express';
 import cors from 'cors';
 import fs from 'fs';
-app.use(express.json()); // Middleware to Convert the data into json 
+
 
 const app = express(); // create the http server (client-server architecture (2-tier)) 
 const port = 3000; //  	A port is a virtual endpoint used by computers to distinguish different types of network traffic
+
+app.use(express.json()); // Middleware to Convert the data into json 
+app.use(cors());
 
 app.listen(port, () => {
     console.log("Server is running on :" + port);
@@ -19,7 +22,7 @@ app.get("/msg", (req,res) => {
 })
 
 app.post("/register", (req,res) => {
-    res.json({msg: "Hii, Registration API Calling"})
+    res.json({msg: "Registration Done Successfully!"})
     const data = req.body;
     console.log(data)
 })
